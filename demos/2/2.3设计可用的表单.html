@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>设计可用的表单</title>
+	<style type="text/css">
+		h1{font-size: 20px;}
+		#login{
+			width: 400px;
+			padding: 1em 2em 0 2em;
+			font-size: 12px;
+		}
+		label{
+			line-height: 26px;
+			display: block;
+			font-weight: bold;
+		}
+		#name,#password{
+			border:1px solid #ccc;
+			width: 160px;
+			height: 22px;
+			padding-left: 20px;
+			margin: 6px 0;
+			line-height: 20px;
+		}
+		#name{background: url(images/name.gif) no-repeat 2px 4px;}
+		#password{background: url(images/password.gif) no-repeat 2px 4px;}
+		#login input:disabled#name{
+			background: url(images/name1.gif) no-repeat 2px 4px;
+			border:1px solid #fff;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>设计可用的表单</h1>
+	<fieldset id="login">
+		<legend>用户登录</legend>
+		<form action="" method="POST" class="form">
+			<label for="name">姓名<input name="name" type="text" id="name" value="" disabled="disabled" /></label>
+			
+			<label for="password">密码<input name="password" type="text" id="password" value=""/></label>
+			
+			<input type="image" class="button" src="images/login1.gif"/>
+		</form>
+
+	</fieldset>
+</body>
+</html>

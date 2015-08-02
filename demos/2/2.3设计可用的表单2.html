@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body{
+			font-family: Helvetica,arial,sans-serif; 
+			margin: 0px;
+			font-size: 14px;
+			background: #fff
+		}
+		div.wrapper{
+			background: url(images/bg.gif) no-repeat;
+			width: 348px;
+			height: 384px;
+			margin-left: 14px;padding-top: 75px;
+		}
+		div.ribbon{
+			background: url(images/ribbon.png) no-repeat;
+			width: 358px;
+			height: 45px;
+			float: left;
+			margin-top: 25px;
+			margin-left: 10px;
+			padding-left: 25px;
+			padding-top: 5px;
+			color: #fff;
+			font-weight: bold; 
+		}
+		div.logo{
+			background: url(images/logo.png) no-repeat;
+			width: 330px;
+			height: 115px;
+		}
+		div.loginwrapper{
+			margin-left: 40px;
+		}
+		/*设计动态文本框效果*/
+		span.usertext{color: #478fab; font-weight: bold;}
+		input.textbox{
+			width: 264px;
+			height: 20px;
+			border: 0px;
+			padding-top: 5px;
+			padding-left: 4px;
+		}
+		input.textbox:hover{
+			border:1px solid #000;
+		}
+		div.bottomwrapper{margin-left: 40px;margin-top: 50px;}
+		a:link,a:visited{color: #fff;text-decoration: none;}
+		a:hover{color: #95ddf9;}
+		/*设计动态按钮效果*/
+		input.button{
+			background: url(images/login_btn.png) 0px 0px;
+			width: 92px;
+			height: 31px;
+			border: 0px;
+			float: right;
+			margin-right: 20px;
+			margin-top: 5px;
+		}
+		input.button:hover{
+			background: url(images/login_btn.png) 0px -31px;
+		}
+		input.button:active{
+			background: url(images/login_btn.png) 0px -62px;
+		}
+		
+	</style>
+</head>
+<body>
+	<h1>设计可用的表单</h1>
+	<div class="ribbon">用户登录</div>
+	<div class="wrapper">
+		<div class="logo"></div>
+		<div class="loginwrapper">
+			<span class="usertext">姓名:</span><br/>
+			<input class="textbox" size="25" type="text"><br/>
+			<span class="usertext">密码:</span><br/>
+			<input class="textbox" size="25" type="password">
+			<img src="images/lock.png" alt="Lock Image"><br/>
+		</div>
+		<div class="bottomwrapper">
+			<input class="button" type="button">
+			<a href="#">忘记密码</a><br/>
+			<a href="#">注册新用户</a>
+		</div>
+	</div>
+</body>
+</html>

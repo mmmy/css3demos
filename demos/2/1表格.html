@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>设计优雅地数据表格</title>
+	<style>
+		h1{font-size: 16px;}
+		table{
+			width:100%;
+			font-size: 12px;
+			table-layout: fixed;
+			empty-cells: show;
+			border-collapse: collapse;
+			margin: 0 auto;
+			border:1px solid #cad9ea;
+		}
+		th{
+			height:30px;
+			overflow: hidden;
+		}
+		td{height: 20px;}
+		td,th{
+			border:1px solid #cad9ea;
+			padding:0 1em 0;
+			text-align: center;
+		}
+		tr:nth-child(even){
+			background-color: #f5fafe;
+		}
+	</style>
+</head>
+<body>
+	<h1>设计优雅地数据表格</h1>
+	<table>
+	<tr>
+		<th>排名</th>
+		<th>校名</th>
+		<th>总得分</th>
+		<th>人才培养总得分</th>
+		<th>研究生培养总得分</th>
+		<th>本科生培养总得分</th>
+		<th>科学研究总得分</th>
+		<th>自然科学研究总得分</th>
+		<th>社会科学总得分</th>
+		<th>所属省份</th>
+		<th>分省排名</th>
+		<th>学校类型</th>
+	</tr>
+    <tr>
+        <td>1</td>
+        <td>清华大学 </td>
+        <td>296.77</td>
+        <td>128.92</td>
+        <td>93.83</td>
+        <td>35.09</td>
+        <td>167.85</td>
+        <td>148.47</td>
+        <td>19.38</td>
+        <td width="16">京 </td>
+        <td width="12">1 </td>
+        <td>理工 </td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>北京大学 </td>
+        <td>222.02</td>
+        <td>102.11</td>
+        <td>66.08</td>
+        <td>36.03</td>
+        <td>119.91</td>
+        <td>86.78</td>
+        <td>33.13</td>
+        <td>京 </td>
+        <td>2 </td>
+        <td>综合 </td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>浙江大学 </td>
+        <td>205.65</td>
+        <td>94.67</td>
+        <td>60.32</td>
+        <td>34.35</td>
+        <td>110.97</td>
+        <td>92.32</td>
+        <td>18.66</td>
+        <td>浙 </td>
+        <td>1</td>
+        <td>综合 </td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>上海交大</td>
+        <td>150.98</td>
+        <td>67.08</td>
+        <td>47.13</td>
+        <td>19.95</td>
+        <td>83.89</td>
+        <td>77.49</td>
+        <td>6.41</td>
+        <td>沪 </td>
+        <td>1</td>
+        <td>综合 </td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>南京大学</td>
+        <td>136.49</td>
+        <td>62.84</td>
+        <td>40.21</td>
+        <td>22.63</td>
+        <td>73.65</td>
+        <td>53.87</td>
+        <td>19.78</td>
+        <td>苏</td>
+        <td>1</td>
+        <td>综合 </td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>复旦大学 </td>
+        <td>136.36</td>
+        <td>63.57</td>
+        <td>40.26</td>
+        <td>23.31</td>
+        <td>72.78</td>
+        <td>51.47</td>
+        <td>21.31</td>
+        <td>沪</td>
+        <td>2</td>
+        <td>综合 </td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>华中科大</td>
+        <td>110.08</td>
+        <td>54.76</td>
+        <td>30.26</td>
+        <td>24.50</td>
+        <td>55.32</td>
+        <td>47.45</td>
+        <td>7.87</td>
+        <td>鄂 </td>
+        <td>1</td>
+        <td>理工 </td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td>武汉大学 </td>
+        <td>103.82</td>
+        <td>50.21</td>
+        <td>29.37</td>
+        <td>20.84</td>
+        <td>53.61</td>
+        <td>36.17</td>
+        <td>17.44</td>
+        <td>鄂 </td>
+        <td>2</td>
+        <td>综合</td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td>吉林大学 </td>
+        <td>96.44</td>
+        <td>48.61</td>
+        <td>25.74</td>
+        <td>22.87</td>
+        <td>47.83</td>
+        <td>38.13</td>
+        <td>9.70</td>
+        <td>吉 </td>
+        <td>1</td>
+        <td>综合</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>西安交大</td>
+        <td>92.82</td>
+        <td>47.22</td>
+        <td>24.54</td>
+        <td>22.68</td>
+        <td>45.60</td>
+        <td>35.47</td>
+        <td>10.13</td>
+        <td>陕</td>
+        <td>1</td>
+        <td>综合</td>
+    </tr>
+	</table>
+</body>
+</html>
