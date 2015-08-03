@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<style type="text/css">
+		html,body{
+			padding: 0;
+			margin: 0;
+			height: 100%;
+			width:100%;
+		}
+		body{
+			font:0.8em Arial,Helvetica,sans-serif;
+			line-height: 1.4em;
+			display: box;
+			display: -moz-box;
+			display: -webkit-box;
+			
+			box-orient:horizontal;
+			-moz-box-orient:horizontal;
+			-webkit-box-orient:horizontal;
+
+			box-pack:center;
+			-moz-box-pack:center;
+			-webkit-box-pack:center;
+		}
+		#page{
+			height: 100%;
+			max-width: 800px;
+			display: box;
+			display: -moz-box;
+			display: -webkit-box;
+			
+			box-orient:vertical;
+			-moz-box-orient:vertical;
+			-webkit-box-orient:vertical;
+
+			box-flex:1;
+			-moz-box-flex:1;
+			-webkit-box-flex:1;
+		}
+		header{
+			display: block;
+			padding: 10px;
+			background: #efefef;
+			margin-bottom: 20px;
+			border-radius: 0 0 10px 10px;
+		}
+		footer{
+			display: block;
+			padding: 10px;
+			background: #efefef;
+			text-align: center;
+			margin-bottom: 20px;
+			border-radius: 10px 10px 0 0;
+		}
+		#main{
+			display: box;
+			display: -moz-box;
+			display: -webkit-box;
+			
+			box-orient:horizontal;
+			-moz-box-orient:horizontal;
+			-webkit-box-orient:horizontal;
+			box-flex:1;
+			-moz-box-flex:1;
+			-webkit-box-flex:1;
+
+			-moz-box-direction:reverse;
+			-webkit-box-direction:reverse;
+			box-direction:reverse;
+		}
+		section{display: block;}
+	</style>
+</head>
+<body>
+	<div id="page">
+		<header>
+			<h1>博客标题</h1>
+			<p>博客概要</p>
+		</header>
+		<div id="main">
+			<section id="content">
+				<article>
+					<h2>文章标题1</h2>
+					<p>文章内容提要1</p>
+				</article>
+				<article>
+					<h2>文章标题2</h2>
+					<p>文章内容提要2</p>
+				</article>
+				<article class="topgroup">
+					<h2>文章标题（置顶）</h2>
+					<p>文章内容提要</p>
+				</article>
+				<article>
+					<h2>文章标题3</h2>
+					<p>文章内容提要3</p>
+				</article>
+				<article>
+					<h2>文章标题4</h2>
+					<p>文章内容提要4</p>
+				</article>
+				<nav><a href="#">上一页</a><a href="#">下一页</a></nav>
+			</section>
+			<section id="sidebar">
+				<div>
+					<h2>
+						<label for="research">搜索</label>
+					</h2>
+					<form action="#">
+						<input type="text" name="research" id="research"/>
+						<input type="submit" value="搜索"/>
+					</form>
+				</div>
+				<div>
+					<h2>友情链接</h2>
+					<ul>
+						<li><a href="#">链接1</a></li>
+						<li><a href="#">链接2</a></li>
+						<li><a href="#">链接3</a></li>
+						<li class="topgroup"><a href="#" >链接4（置顶）</a></li>
+						<li><a href="#">链接5</a></li>
+						<li><a href="#">链接6</a></li>
+					</ul>
+				</div>
+			</section>
+		</div>
+		<footer>
+			<p>CSS3新技术体验，与<a href="#">博主</a>一起讨论。</p>
+			<p>更多信息请访问<a href="#">博主网站</a></p>
+		</footer>
+	</div>
+</body>
+</html>
