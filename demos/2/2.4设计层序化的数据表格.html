@@ -3,7 +3,43 @@
 <head>
 	<meta charset="utf-8">
 	<style type="text/css">
-
+		body{font-family: "宋体" arial,helvetica,sans-serif;}
+		table{
+			border-collapse: collapse; /*细线表格必须声明的属性*/
+/*			font-size: 75%;
+*/			line-height: 1.1;
+		}
+		tr:hover,td:hover{background: #ff9;}
+		tr,td{
+			padding: .3em .5em;
+			cursor:pointer;
+		}
+		th{
+			font-weight: normal;
+			text-align: left;
+			padding-left: 15px
+		}
+		td:only-of-type{/*使用结构伪类选择器选择合并单元格所在的行,*/
+			background:#eee url(images/arrow.gif) no-repeat 12px 50%;
+			padding-left: 28px;
+			font-weight: bold;
+			color: #444
+		}
+		thead th{
+			background: #c6ceda;
+			border-color: #fff #fff #888 #fff;
+			border-style: solid;
+			border-width: 1px 1px 2px 1px;
+			padding-left: .5em;
+		}
+		tbody th:not(.end){
+			background: url(images/dots.gif) 15px 56% no-repeat;
+			padding-left: 26px;
+		}
+		tbody th.end{
+			background: url(images/dots2.gif) 15px 56% no-repeat;
+			padding-left: 26px;
+		}
 	</style>
 </head>
 <body>
@@ -16,6 +52,7 @@
 				<th>总得分</th>
 				<th>人才培养总得分</th>
 				<th>研究生培养总得分</th>
+				<th>本科生生培养总得分</th>
 				<th>科学研究总得分</th>
 				<th>自然科学研究总得分</th>
 				<th>社会科学总得分</th>
@@ -29,174 +66,149 @@
 				<td colspan="12">一类</td>
 			</tr>
 			<tr>
-			<td>1</td>
-			<td>清华大学</td>
-			<td>296.77</td>
-			<td>128.92</td>
-			<td>93.83</td>
-			<td>35.09</td>
-			<td>167.85</td>
-			<td>167.47</td>
-			<td>19.38</td>
-			<td width="16">京</td>
-			<td>1</td>
-			<td>理工</td>
-		</tr>	
-		<tr>
-			<td>1</td>
-			<td>清华大学</td>
-			<td>296.77</td>
-			<td>128.92</td>
-			<td>93.83</td>
-			<td>35.09</td>
-			<td>167.85</td>
-			<td>167.47</td>
-			<td>19.38</td>
-			<td width="16">京</td>
-			<td>1</td>
-			<td>理工</td>
-		</tr>
-		<td colspan="12">二类</td>
-		<tr>
-			<td>1</td>
-			<td>清华大学</td>
-			<td>296.77</td>
-			<td>128.92</td>
-			<td>93.83</td>
-			<td>35.09</td>
-			<td>167.85</td>
-			<td>167.47</td>
-			<td>19.38</td>
-			<td width="16">京</td>
-			<td>1</td>
-			<td>理工</td>
-		</tr>
-		<tr>
-			<td>1</td>
-			<td>清华大学</td>
-			<td>296.77</td>
-			<td>128.92</td>
-			<td>93.83</td>
-			<td>35.09</td>
-			<td>167.85</td>
-			<td>167.47</td>
-			<td>19.38</td>
-			<td width="16">京</td>
-			<td>1</td>
-			<td>理工</td>
-		</tr>
-		<tr>
-			<td>1</td>
-			<td>清华大学</td>
-			<td>296.77</td>
-			<td>128.92</td>
-			<td>93.83</td>
-			<td>35.09</td>
-			<td>167.85</td>
-			<td>167.47</td>
-			<td>19.38</td>
-			<td width="16">京</td>
-			<td>1</td>
-			<td>理工</td>
-		</tr>
-		<tr>
-			<td>1</td>
-			<td>清华大学</td>
-			<td>296.77</td>
-			<td>128.92</td>
-			<td>93.83</td>
-			<td>35.09</td>
-			<td>167.85</td>
-			<td>167.47</td>
-			<td>19.38</td>
-			<td width="16">京</td>
-			<td>1</td>
-			<td>理工</td>
-		</tr>
-		<tr>
-			<td>1</td>
-			<td>清华大学</td>
-			<td>296.77</td>
-			<td>128.92</td>
-			<td>93.83</td>
-			<td>35.09</td>
-			<td>167.85</td>
-			<td>167.47</td>
-			<td>19.38</td>
-			<td width="16">京</td>
-			<td>1</td>
-			<td>理工</td>
-		</tr>
-		<tr>
-			<td>1</td>
-			<td>清华大学</td>
-			<td>296.77</td>
-			<td>128.92</td>
-			<td>93.83</td>
-			<td>35.09</td>
-			<td>167.85</td>
-			<td>167.47</td>
-			<td>19.38</td>
-			<td width="16">京</td>
-			<td>1</td>
-			<td>理工</td>
-		</tr>
-		<tr>
-			<td>1</td>
-			<td>清华大学</td>
-			<td>296.77</td>
-			<td>128.92</td>
-			<td>93.83</td>
-			<td>35.09</td>
-			<td>167.85</td>
-			<td>167.47</td>
-			<td>19.38</td>
-			<td width="16">京</td>
-			<td>1</td>
-			<td>理工</td>
-		</tr>
-		<tr>
-			<td>1</td>
-			<td>清华大学</td>
-			<td>296.77</td>
-			<td>128.92</td>
-			<td>93.83</td>
-			<td>35.09</td>
-			<td>167.85</td>
-			<td>167.47</td>
-			<td>19.38</td>
-			<td width="16">京</td>
-			<td>1</td>
-			<td>理工</td>
-		</tr>
-		<tr>
-			<td>1</td>
-			<td>清华大学</td>
-			<td>296.77</td>
-			<td>128.92</td>
-			<td>93.83</td>
-			<td>35.09</td>
-			<td>167.85</td>
-			<td>167.47</td>
-			<td>19.38</td>
-			<td width="16">京</td>
-			<td>1</td>
-			<td>理工</td>
-		</tr>
-		<tr>
-			<td>1</td>
-			<td>清华大学</td>
-			<td>296.77</td>
-			<td>128.92</td>
-			<td>93.83</td>
-			<td>35.09</td>
-			<td>167.85</td>
-			<td>167.47</td>
-			<td>19.38</td>
-			<td width="16">京</td>
-			<td>1</td>
-			<td>理工</td>
-		</tr>
+	        <th>1</th>
+	        <td>清华大学 </td>
+	        <td>296.77</td>
+	        <td>128.92</td>
+	        <td>93.83</td>
+	        <td>35.09</td>
+	        <td>167.85</td>
+	        <td>148.47</td>
+	        <td>19.38</td>
+	        <td width="16">京 </td>
+	        <td width="12">1 </td>
+	        <td>理工 </td>
+		    </tr>
+		    <tr>
+	        <th class="end">2</th>
+	        <td>北京大学 </td>
+	        <td>222.02</td>
+	        <td>102.11</td>
+	        <td>66.08</td>
+	        <td>36.03</td>
+	        <td>119.91</td>
+	        <td>86.78</td>
+	        <td>33.13</td>
+	        <td>京 </td>
+	        <td>2 </td>
+	        <td>综合 </td>
+	    </tr>
+	    <tr>
+	    	<td colspan="12">二类</td>
+	    </tr>
+
+	    <tr>
+	        <th>3</th>
+	        <td>浙江大学 </td>
+	        <td>205.65</td>
+	        <td>94.67</td>
+	        <td>60.32</td>
+	        <td>34.35</td>
+	        <td>110.97</td>
+	        <td>92.32</td>
+	        <td>18.66</td>
+	        <td>浙 </td>
+	        <td>1</td>
+	        <td>综合 </td>
+	    </tr>
+	    <tr>
+	        <th>4</th>
+	        <td>上海交大</td>
+	        <td>150.98</td>
+	        <td>67.08</td>
+	        <td>47.13</td>
+	        <td>19.95</td>
+	        <td>83.89</td>
+	        <td>77.49</td>
+	        <td>6.41</td>
+	        <td>沪 </td>
+	        <td>1</td>
+	        <td>综合 </td>
+	    </tr>
+	    <tr>
+	        <th>5</th>
+	        <td>南京大学</td>
+	        <td>136.49</td>
+	        <td>62.84</td>
+	        <td>40.21</td>
+	        <td>22.63</td>
+	        <td>73.65</td>
+	        <td>53.87</td>
+	        <td>19.78</td>
+	        <td>苏</td>
+	        <td>1</td>
+	        <td>综合 </td>
+	    </tr>
+	    <tr>
+	        <th>6</th>
+	        <td>复旦大学 </td>
+	        <td>136.36</td>
+	        <td>63.57</td>
+	        <td>40.26</td>
+	        <td>23.31</td>
+	        <td>72.78</td>
+	        <td>51.47</td>
+	        <td>21.31</td>
+	        <td>沪</td>
+	        <td>2</td>
+	        <td>综合 </td>
+	    </tr>
+	    <tr>
+	        <th>7</th>
+	        <td>华中科大</td>
+	        <td>110.08</td>
+	        <td>54.76</td>
+	        <td>30.26</td>
+	        <td>24.50</td>
+	        <td>55.32</td>
+	        <td>47.45</td>
+	        <td>7.87</td>
+	        <td>鄂 </td>
+	        <td>1</td>
+	        <td>理工 </td>
+	    </tr>
+	    <tr>
+	        <th>8</th>
+	        <td>武汉大学 </td>
+	        <td>103.82</td>
+	        <td>50.21</td>
+	        <td>29.37</td>
+	        <td>20.84</td>
+	        <td>53.61</td>
+	        <td>36.17</td>
+	        <td>17.44</td>
+	        <td>鄂 </td>
+	        <td>2</td>
+	        <td>综合</td>
+	    </tr>
+	    <tr>
+	        <th>9</th>
+	        <td>吉林大学 </td>
+	        <td>96.44</td>
+	        <td>48.61</td>
+	        <td>25.74</td>
+	        <td>22.87</td>
+	        <td>47.83</td>
+	        <td>38.13</td>
+	        <td>9.70</td>
+	        <td>吉 </td>
+	        <td>1</td>
+	        <td>综合</td>
+	    </tr>
+	    <tr>
+	        <th class="end">10</th>
+	        <td>西安交大</td>
+	        <td>92.82</td>
+	        <td>47.22</td>
+	        <td>24.54</td>
+	        <td>22.68</td>
+	        <td>45.60</td>
+	        <td>35.47</td>
+	        <td>10.13</td>
+	        <td>陕</td>
+	        <td>1</td>
+	        <td>综合</td>
+	    </tr>
 		</tbody>
 	</table>
 </body>

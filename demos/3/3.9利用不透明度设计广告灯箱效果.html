@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>利用不透明度设计广告灯箱效果</title>
+	<style type="text/css">
+		body{
+			background: black;
+			margin: 0;
+			padding: 0;
+		}
+		.bg{
+			position: absolute;
+			background: white;
+			width: 1200px;
+			height: 900px;
+			opacity: 0.3;
+		}
+		.bg h1{
+			margin: auto;
+			text-align: center;
+		}
+		.lightbox{
+			position: absolute;
+			left: 50px;
+			top: 50px;
+			width: 600px;
+			height: 400px;
+			background: white;
+		}
+		.lightbox h1{
+			text-align: center;
+			margin-top: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div class="bg"><h1>这里是背景,被暗化了!</h1></div>
+	<div class="lightbox"><h1>灯箱效果</h1>
+</body>
+</html>

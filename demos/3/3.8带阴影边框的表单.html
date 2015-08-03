@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>REBA Color</title>
+	<style>
+		input,textarea{
+			padding: 4px;
+			border:solid 1px #e5e5e5;
+			outline: 0;
+			font:normal 13px/100% Verdana,Tahoma,sans-serif;
+			width: 200px;
+			background: #fff;
+			box-shadow: rgba(0,0,0,0.1) 0px 0px 8px;
+		}
+		textarea{
+			width: 400px;
+			max-width: 400px;
+			height: 150px;
+			line-height: 150%;
+		}
+		input:hover,textarea:hover,input:focus,textarea:focus{border-color: #c9c9c9;}
+		label{
+			margin-left: 10px;
+			color:#999999;
+			display: block;
+		}
+		.submit input{
+			width: auto;
+			padding: 9px 15px;
+			background: #617798;
+			border:0;
+			font-size: 14px;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<p class="name">
+			<label for="name">姓名</label>
+			<input type="text" name="name" id="name"/></p>
+		<p class="email">
+			<label for="email">邮箱</label>
+			<input type="text" name="web" id="web"/></p>
+		<p class="web">
+			<label for="web">个人网址</label>
+			<input type="text" name="web" id="web"></p>
+		<p class="text">
+			<label for="text">留言</label>
+			<textarea name="text" id="text"></textarea></p>
+		<p class="submit">
+			<input type="submit" value="提交"/></p>
+
+	</form>
+</body>
+</html>
