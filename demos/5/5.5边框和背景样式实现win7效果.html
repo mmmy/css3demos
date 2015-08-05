@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<style type="text/css">
+		html,body{
+			padding: 0;
+			margin: 0;
+			height: 100%;
+		}
+		#desktop{
+			background: #2c609b;
+			height: 100%;
+			font: 12px "Segoe UI",Tahoma,sans-serif;
+			box-shadow: inset 0 -200px 100px #032b5c,
+						inset -100px 100px 100px #2073b5,
+						inset 100px 200px 100px #1f9bb1;
+			-moz-box-shadow: inset 0 -200px 100px #032b5c,
+						inset -100px 100px 100px #2073b5,
+						inset 100px 200px 100px #1f9bb1;
+			-webkit-box-shadow: inset 0 -200px 100px #032b5c,
+						inset -100px 100px 100px #2073b5,
+						inset 100px 200px 100px #1f9bb1;
+			
+
+			overflow: hidden;
+		}
+		#startmemu{
+			position: absolute;
+			bottom: 0;
+			height: 40px;
+			width:100%;
+			background: rgba(178,215,255,0.25);
+			box-shadow: 0 -2px 20px rgba(0,0,0,0.25),
+						inset 0 1px #042754,
+						inset 0 2px #5785b0;
+			-moz-box-shadow: 0 -2px 20px rgba(0,0,0,0.25),
+						inset 0 1px #042754,
+						inset 0 2px #5785b0;
+			-webkit-box-shadow: 0 -2px 20px rgba(0,0,0,0.25),
+						inset 0 1px #042754,
+						inset 0 2px #5785b0;
+			overflow: hidden;
+		}
+		#startmemu button{
+			font-size: 1.6em;
+			color:#fff;
+			text-shadow:1px 2px 2px #00294b;
+		}
+		#startmemu #winflag{
+			float: left;
+			margin: 2px;
+			height: 34px;
+			width:80px;
+			margin-right: 10px;
+			border:none;
+			background: #034a76;
+			border-radius:40px;
+			-moz-border-radius:40px;
+			-webkit-border-radius:40px;
+
+			 -moz-box-shadow: 0 0 1px #fff, 0 0 3px #000, 0 0 3px #000, inset 0 1px #fff, inset 0 12px rgba(255, 255, 255, 0.15), inset 0 4px 10px #cef, inset 0 22px 5px #0773b4, inset 0 -5px 10px #0df;      
+   			 -webkit-box-shadow: 0 0 1px #fff, 0 0 3px #000, 0 0 3px #000;
+    		box-shadow: 0 0 1px #fff, 0 0 3px #000, 0 0 3px #000, inset 0 1px #fff, inset 0 12px rgba(255, 255, 255, 0.15), inset 0 4px 10px #cef, inset 0 22px 5px #0773b4, inset 0 -5px 10px #0df;
+		}
+		#startmemu .application{
+			postion:relative;
+			bottom: 1px;
+			height: 38px;
+			width:52px;
+			background: rgba(14,59,103,0.25);
+			border:1px solid rgba(0,0,0,0.8);
+			-o-transition:.3s all;
+			-moz-transition:.3s all;
+			-webkit-transition:.3s all;
+
+			border-radius: 4px;
+			-moz-border-radius: 4px;
+			-webkit-border-radius: 4px;
+
+			-moz-box-shadow: inset 0 0 1px #fff, inset 4px 4px 20px rgba(255, 255, 255, 0.33), inset -2px -2px 10px rgba(255, 255, 255, 0.25);
+   			 box-shadow: inset 0 0 1px #fff, inset 4px 4px 20px rgba(255, 255, 255, 0.33), inset -2px -2px 10px rgba(255, 255, 255, 0.25);
+		}
+		#startmemu .application:hover{background: rgba(255,255,255,0.25);}
+		/*设计窗体效果*/
+		.window{
+			position:absolute;
+			left:150px;
+			top:70px;
+			height: 400px;
+			width: 400px;
+			padding: 7px;
+			border: 1px solid rgba(255,255,255,0.6);
+			background: rgba(178,215,255,0.75);
+
+			border-radius: 8px;
+			-moz-border-radius: 8px;
+			-webkit-border-radius: 8px;
+
+			box-shadow: 0 2px 16px #000,
+						0 0 1px #000,
+						0 0 1px #000;
+			-moz-box-shadow: 0 2px 16px #000,
+						0 0 1px #000,
+						0 0 1px #000;
+			-webkit-box-shadow: 0 2px 16px #000,
+						0 0 1px #000,
+						0 0 1px #000;
+			text-shadow:0 0 15px #fff,0 0 15px #fff;
+		}
+		.window span{display: block;}
+		.window input{
+			font-size: 1em;
+			display: inline-block;
+			margin: 50px 0 10px 0;
+			border: 1px solid rgba(0,0,0,0.5);
+			padding: 4px 8px;
+			/*width: 44%;*/
+			background: rgba(255, 255, 255, 0.75);
+			border-radius: 2px;
+			-webkit-border-radius: 2px;
+			-moz-border-radius: 2px;
+
+			box-shadow: 0 0 2px #fff,
+						0 0 1px #fff,
+						inset 0 0 3px #fff;
+			-moz-box-shadow: 0 0 2px #fff,
+						0 0 1px #fff,
+						inset 0 0 3px #fff;
+			-webkit-box-shadow: 0 0 2px #fff,
+						0 0 1px #fff,
+						inset 0 0 3px #fff;
+
+		}
+		.window input + input {margin-left: 12px;}
+		.window.secondary{
+			left: 300px;
+			top: 125px;
+			opacity: 0.66;
+		}
+		.window.secondary span{margin-bottom: 85px;}
+		.window .content{
+			padding: 10px;
+			height: 279px;
+			background: #fff;
+			border:1px solid #000;
+
+			box-shadow: 0 0 5px #fff,
+						0 0 1px #fff,
+						inset 0 1px 2px #aaa;
+			-moz-box-shadow: 0 0 5px #fff,
+						0 0 1px #fff,
+						inset 0 1px 2px #aaa;
+			-webkit-box-shadow: 0 0 5px #fff,
+						0 0 1px #fff,
+						inset 0 1px 2px #aaa;
+			text-shadow:none;
+		}
+	</style>
+</head>
+<body>
+	<div id="desktop">
+		<div id="bgWindow" class="window secondary">
+			<span>窗口1</span>
+			<div class="content"></div>
+		</div>
+		<div id="frontWindow" class="window">
+			<span>窗口2</span>
+			<div id="winInput">
+				<input type="text" value="文本框1">
+				<input type="text" value="文本框2">
+			</div>
+			<div id="winContent" class="content">文本区域</div>
+		</div>
+		<!-- 开始菜单 -->
+
+		<div id="startmemu">
+			<button id="winflag">开始</button>
+			<span id="toolBtn">
+				<button class="application">☁</button>
+				<button class="application">✱</button>
+				<button class="application">☀</button>
+				<button class="application">☯</button>
+			</span>
+		</div>
+	</div>
+</body>
+</html>
