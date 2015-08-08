@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body{background: #2d1225;padding: 0;margin: 0;}
+		.icon{
+			display: block;
+			position: relative;
+			
+			height: 70px;
+			width: 70px;
+			background: rgba(255,255,255,0.6);
+			border-radius: 50px;
+			border:1px solid #ccc;
+			margin: 0 6px;
+
+			box-shadow: 0 0 4px white,
+						inset 0 0 1px #333;
+						
+			-moz-box-shadow: 0 0 1px white,
+						inset 0 0 1px #333;
+						
+			-webkit-box-shadow: 0 0 1px white,
+						inset 0 0 1px #333;
+			
+			transition:0.15s ease;			
+		}
+		.icon:hover{
+			transform-origin:center bottom;
+			transform:scale(1.5);
+			background: rgba(255,255,255,1.0);
+			z-index: 10;
+			box-shadow: none;
+			/*margin: 0 15px;*/
+		}
+		.osx-dock{
+			position: fixed;
+			bottom: 12px;
+			height: 120px;
+			text-align: center;
+			width: 100%
+		}
+		.osx-dock ul{
+			position: relative;
+			display: inline-block;
+			padding: 0 20px;
+			/*height: 100px;
+			line-height: 0;
+			overflow: hidden;*/
+		}
+		.osx-dock ul li{
+			display: block;
+			position: relative;
+			float: left;
+			
+			/*margin: 20px 10 4px 0;*/
+		}
+		</style>
+</head>
+<body>
+	<div class="icon1"></div>
+	<div class="osx-dock">
+		<ul>
+			<li><div class="icon"></div></li>
+			<li><div class="icon"></div></li>
+			<li><div class="icon"></div></li>
+			<li><div class="icon"></div></li>
+			<li><div class="icon"></div></li>
+			<li><div class="icon"></div></li>
+			<li><div class="icon"></div></li>
+			<li><div class="icon"></div></li>
+			<li><div class="icon"></div></li>
+		</ul>
+	</div>
+</body>
+</html>

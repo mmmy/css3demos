@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body{margin: 0;padding: 0;background: #1d1225;}
+		.accordion{
+			margin: 20px;
+			background: #eee;
+			border:1px solid #999;
+			width: 520px;
+			height: 100%;
+		}
+		.accordion h2{margin-left: 20px;}
+		.accordion .section{
+			background: #fff;
+			border:1px solid #aaa;
+		}
+		.accordion h3 a{
+			font-weight: normal;
+			text-decoration: none;
+			margin-left: 10px;
+		}
+
+		.accordion h3+div div{margin: 8px 0;}
+		.accordion :target h3 a{font-weight: bold;}
+		.accordion h3+div{
+			height: 0;
+			overflow: hidden;
+			transition:height 0.3s ease-in;
+			border-top: 1px solid #aaa;
+		}
+		.accordion :target h3+div{
+			height: 200px;
+			overflow: auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="accordion">
+		<h2>手风琴式折叠面板</h2>
+		<div id="one" class="section">
+			<h3><a href="#one">折叠栏1</a></h3>
+			<div>
+				<div style="border:1px solid #aaa; height:300px; width:500px; background:orange"></div>
+			</div>
+		</div>
+		<div id="two" class="section">
+			<h3><a href="#two">折叠栏2</a></h3>
+			<div>
+				<div style="border:1px solid #aaa; height:300px; width:500px; background:green"></div>
+			</div>
+		</div>
+		<div id="three" class="section">
+			<h3><a href="#three">折叠栏3</a></h3>
+			<div>
+				<div style="border:1px solid #aaa; height:300px; width:500px; background:gray"></div>
+			</div>
+		</div>
+		<div id="four" class="section">
+			<h3><a href="#four">折叠栏4</a></h3>
+			<div>
+				<div style="border:1px solid #aaa; height:300px; width:500px; background:purple"></div>
+			</div>
+		</div>
+		<div id="five" class="section">
+			<h3><a href="#five">折叠栏5</a></h3>
+			<div>
+				<div style="border:1px solid #aaa; height:300px; width:500px; background:blue"></div>
+			</div>
+		</div>
+		<div id="six" class="section">
+			<h3><a href="#six">折叠栏6</a></h3>
+			<div>
+				<div style="border:1px solid #aaa; height:300px; width:500px; background:red"></div>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+</html>

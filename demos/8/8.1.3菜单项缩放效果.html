@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.test{margin-top:30px;}
+		.test ul{list-style: none;}
+		.test li{
+			float: left;
+			width: 100px;
+			background: #ccc;
+			margin-left: 3px;
+			line-height: 30px;
+		}
+		.test a{
+			display: block;
+			text-align: center;
+			height: 30px;
+			text-decoration: none;
+			color: #666;
+		}
+		.test a:hover{
+			/*transform:scale(2);
+			-moz-transform:scale(2);
+			-webkit-transform:scale(2);*/
+			background: #f00;
+			color: #fff;
+			font-weight: bold;
+		}
+		.test li:nth-child(1) a:hover{
+			transform:scale(2);
+			-moz-transform:scale(2);
+			-webkit-transform:scale(2);
+		}
+		.test li:nth-child(2) a:hover{
+			transform:scale(1,-1);
+			-moz-transform:scale(1,-1);
+			-webkit-transform:scale(1,-1);
+		}
+		.test li:nth-child(3) a:hover{
+			transform:scale(1.2,1.8);
+			-moz-transform:scale(1.2,1.8);
+			-webkit-transform:scale(1.2,1.8);
+		}
+		.test li:nth-child(4) a:hover{
+			/*transform:scale(-3);
+			-moz-transform:scale(-3);
+			-webkit-transform:scale(-3);*/
+			transform:translate(4px,4px);
+			-moz-transform:translate(4px,4px);
+			-webkit-transform:translate(4px,4px);
+		}
+		.test li:nth-child(5) a:hover{
+			transform:skew(0,30deg);
+			-moz-transform:skew(0,30deg);
+			-webkit-transform:skew(0,30deg);
+		}
+
+	</style>
+</head>
+<body>
+	<div class="test">
+		<ul>
+			<li><a href="#">首页</a></li>
+			<li><a href="#">产品介绍</a></li>
+			<li><a href="#">服务介绍</a></li>
+			<li><a href="#">技术支持</a></li>
+			<li><a href="#">技术支持</a></li>
+			<li><a href="#">联系我们</a></li>
+		</ul>
+	</div>
+</body>
+</html>
