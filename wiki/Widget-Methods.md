@@ -8,7 +8,7 @@ widget.onChartReady(function() {
 });
 ```
 
-#Methods
+# Methods
 
 **Before 1.5 [[Chart Methods]] belonged to the Widget. Please see the full list of actions [[here|Chart-Methods]]**
 
@@ -57,43 +57,43 @@ widget.onChartReady(function() {
   * [[layout()|Widget-Methods#chart-layout]]
   * [[setLayout(layout)|Widget-Methods#chart-setlayoutlayout]]
 
-#Subscribing To Chart Events
+# Subscribing To Chart Events
 
-####onChartReady(callback)
+#### onChartReady(callback)
 1. `callback`: function()
 
 The Charting Library will call the callback provided once when chart is initialized and ready. You can safely call all other methods from this moment.
 
-####onSymbolChange(callback)
+#### onSymbolChange(callback)
 1. `callback`: function(symbolData)
   1.  `symbolData`: object `{name, exchange, description, type, interval}`
 
 The Charting Library will call the callback provided every time the main series symbol changes. New symbol info will be passed as argument.
 
-####onIntervalChange(callback)
+#### onIntervalChange(callback)
 1. `callback`: function(interval)
   1. `interval`: string
 
 The Charting Library will call the callback provided every time the main series interval changes. New interval will be passed as argument.
 
-####onAutoSaveNeeded(callback)
+#### onAutoSaveNeeded(callback)
 1. `callback`: function()
 
 The Library will call the callback provided every time when user changes the chart. `Chart change` means any user action that can be undone. The callback will not be called more than once in five seconds.
 See also [auto_save_delay](https://github.com/tradingview/charting_library/wiki/Widget-Constructor#auto_save_delay).
 
-####onBarMarkClicked(callback)
+#### onBarMarkClicked(callback)
 1. `callback`: function(markId)
 
 The Library will call the callback provided every time when user clicks a [[mark on bar|Marks-On-Bars]]. Mark ID will be passed as an argument.
 
-####onTimescaleMarkClicked(callback)
+#### onTimescaleMarkClicked(callback)
 1. `callback`: function(markId)
 
 The Library will call the callback provided every time when user clicks a timescale mark. Mark ID will be passed as an argument.
 
 
-####onGrayedObjectClicked(callback)
+#### onGrayedObjectClicked(callback)
 1. `callback`: function(subject)
   1. `subject`: object `{type, name}`
     1. `type`: `drawing` | `study`
@@ -131,17 +131,17 @@ widget.onChartReady(function() {
 
 ```
 
-####onScreenshotReady(callback)
+#### onScreenshotReady(callback)
 1. `callback`: function(imageName)
 
 The Library will call the callback provided every time when user creates a screenshot and server returns the created image name.
 
-####onTick(callback)
+#### onTick(callback)
 1. `callback`: function(data)
 
 The Library will call the callback provided every time when recent bar updates.
 
-####onShortcut(shortcut, callback)
+#### onShortcut(shortcut, callback)
 1. `shortcut`
 2. `callback`: function(data)
 
@@ -155,7 +155,7 @@ widget.onShortcut("alt+s", function() {
 });
 ```
 
-####subscribe(event, callback)
+#### subscribe(event, callback)
 1. `event`: can be 
   * `toggle_sidebar` - drawing toolbar is shown/hidden
   * `indicators_dialog` - Indicators dialog is shown
@@ -170,47 +170,47 @@ widget.onShortcut("alt+s", function() {
 
 The library will call `callback` when GUI `event` is happened. Every event can have different set of arguments.
 
-#Chart Actions
+# Chart Actions
 
-####chart()
+#### chart()
 
 Returns a chart object that you can use to call [[Chart-Methods]]
 
-####setLanguage(locale)
+#### setLanguage(locale)
 1. `locale`: [[language code|Localization]]
 
 Sets the Widget's language. For now, this call reloads the chart. **Please avoid using it**.
 
-####setSymbol(symbol, interval, callback)
+#### setSymbol(symbol, interval, callback)
 1. `symbol`: string
 2. `interval`: string
 3. `callback`: function()
 
 Makes the chart to change its symbol and resolution. Callback is called after new symbol's data arrived.
 
-####remove()
+#### remove()
 Removes chart widget from your page.
 
-####closePopupsAndDialogs()
+#### closePopupsAndDialogs()
 
 Calling this method closes a context menu or a dialog if it is shown.
 
-#Saving/Loading Charts
+# Saving/Loading Charts
 
 
-####save(callback)
+#### save(callback)
 1. `callback`: function(object)
 
 Saves the chart state to JS object. Charting Library will call your callback and pass the state object as argument. This call is a part of low-level [[save/load API|Saving-and-Loading-Charts]].
 
-####load(state)
+#### load(state)
 1. `state`: object
 
 Loads the chart from state object. This call is a part of low-level [[save/load API|Saving-and-Loading-Charts]].
 
-#Custom UI Controls
+# Custom UI Controls
 
-####onContextMenu(callback)
+#### onContextMenu(callback)
 1. `callback`: function(unixtime, price). This callback is expected to return a value (see below).
 
 The Library will call the callback provided every time when user opens context menu on the chart. Unix time and price of context menu point will be provided as arguments. To customize context menu items you have to return array of items descriptors. Item descriptor has following structure:
@@ -253,7 +253,7 @@ widget.onChartReady(function() {
     });
 ```
 
-####createButton(options)
+#### createButton(options)
 1. `options`: object `{ align: "left" }`
   1. `align`: "right" | "left". default: "left"
 
@@ -268,9 +268,9 @@ widget.onChartReady(function() {
 });
 ```
 
-#Getters
+# Getters
 
-####symbolInterval(callback)
+#### symbolInterval(callback)
 1. `callback`: function(result)
   1. `result`: object `{symbol, interval}`
 
@@ -278,78 +278,78 @@ widget.onChartReady(function() {
 
 Charting Library will call your callback with an object containing chart's symbol and interval.
 
-####mainSeriesPriceFormatter()
+#### mainSeriesPriceFormatter()
 
 Returns object with method `format` that you can use to format prices. Introduced in 1.5.
 
 
-#Customization
+# Customization
 
 
-####addCustomCSSFile(url)
+#### addCustomCSSFile(url)
 1. `url` should be absolute or relative path to 'static` folder
 
 This method was introduced in version `1.3`. Starting from `1.4` use [custom_css_url](https://github.com/tradingview/charting_library/wiki/Widget-Constructor#custom_css_url) instead.
 
-####applyOverrides(overrides)
+#### applyOverrides(overrides)
 *Introduced in Charting Library 1.5*
 
 1. `overrides` is an object. It is the same as [overrides](https://github.com/tradingview/charting_library/wiki/Widget-Constructor#overrides) in Widget Constructor.
 
 This method applies overrides to properties without reloading the chart.
 
-#:chart: Trading Platform
+# :chart: Trading Platform
 
 The following methods are available in [[Trading Platform]] only.
 
-####:chart: isFloatingTradingPanelVisible()
+#### :chart: isFloatingTradingPanelVisible()
 
 This method returns `true` if the Floating Trading Panel is visible and `false` otherwise.
 
-####:chart: toggleFloatingTradingPanel()
+#### :chart: toggleFloatingTradingPanel()
 
 This method hides the Floating Trading Panel if it is visible and shows otherwise.
 
-####:chart: isBottomTradingPanelVisible()
+#### :chart: isBottomTradingPanelVisible()
 
 This method returns `true` if the Bottom Trading Panel is visible and `false` otherwise.
 
-####:chart: toggleBottomTradingPanel()
+#### :chart: toggleBottomTradingPanel()
 
 This method hides the Bottom Trading Panel if it is visible and shows otherwise.
 
-####:chart: showSampleOrderDialog(order)
-####:chart: showSampleClosePositionDialog(position)
-####:chart: showSampleReversePositionDialog(position)
+#### :chart: showSampleOrderDialog(order)
+#### :chart: showSampleClosePositionDialog(position)
+#### :chart: showSampleReversePositionDialog(position)
 1. `order` or 'position': object 
 
 Displays a sample order/position dialog. These dialogs look like Trading View Paper Trading ones. Usually you don't need to use sample dialogs. These methods are used in the trading sample.
 
-#:chart: Multiple Charts Layout
+# :chart: Multiple Charts Layout
 
-####:chart: chart(index)
+#### :chart: chart(index)
 1. `index`: index of a chart starting from 0. `index` is 0 by default.
 
 Returns a chart object that you can use to call [[Chart-Methods]]
 
-####:chart: activeChart()
+#### :chart: activeChart()
 
 Returns current active chart object that you can use to call [[Chart-Methods]]
 
-####:chart: chartsCount()
+#### :chart: chartsCount()
 
 Returns amount of charts in the current layout
 
-####:chart: layout()
+#### :chart: layout()
 
 Returns current layout mode. Possible values: `4`, `6`, `8`, `s`, `2h`, `2-1`, `2v`, `3h`, `3v`, `3s`.
 
-####:chart: setLayout(layout)
+#### :chart: setLayout(layout)
 1. `layout`: Possible values: `4`, `6`, `8`, `s`, `2h`, `2-1`, `2v`, `3h`, `3v`, `3s`.
 
 Changes current chart layout.
 
-#See Also
+# See Also
 * [[Chart-Methods]]
 * [[Charts Customization 101]]
 * [[Widget Constructor]]

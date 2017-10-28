@@ -128,7 +128,7 @@ mainSeriesProperties.areaStyle.linewidth: 1
 mainSeriesProperties.areaStyle.priceSource: "close"
 ```
 
-####Customization of Overlay Symbols
+#### Customization of Overlay Symbols
 
 ```
 study_Overlay@tv-basicstudies.style: (bars = 0, candles = 1, line = 2, area = 3, heiken ashi = 8, hollow candles = 9)
