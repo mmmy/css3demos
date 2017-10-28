@@ -2,7 +2,7 @@
 
 Please note that the leading `-` characters are not a part of featureset name in the table below.
 
-### Visibility of controls and other visual elements
+## # Visibility of controls and other visual elements
 
 | ID                                      | Default State | Library Version | Description                                                |
 |-----------------------------------------|---------------|-----------------|-------------|
@@ -43,14 +43,14 @@ Please note that the leading `-` characters are not a part of featureset name in
 | hide_last_na_study_output               | off           | 1.4             | hides last n/a study output        |
 | symbol_info                             | on            | 1.5             | Symbol Info dialog                 |
 
-### Elements placement
+## # Elements placement
 
 | ID                           | Default State | Library Version | Description                                                        |
 |------------------------------|---------------|-----------------|--------------------------------------------------------------------|
 | move_logo_to_main_pane       | off           |                 | Places the logo on the main series pane instead of the bottom pane |
 | header_saveload_to_the_right | off           |                 | Moves Save and Load buttons to the right                           |
 
-### Behavior
+## # Behavior
 
 | ID	| Default State	| Library Version | Description
 |-------|---------------|-----------------|------------
@@ -69,7 +69,7 @@ Please note that the leading `-` characters are not a part of featureset name in
 | adapt_onchart_logo_background	| on	|                 | logo background color is changed to match the background
 | same_data_requery             | off   |                 | allows you to call `setSymbol` with the same symbol to refresh the data
 
-### "Big Rocks"
+## # "Big Rocks"
 
 | ID	| Default State	| Library Version | Description
 |-------|---------------|-----------------|------------
@@ -78,7 +78,7 @@ Please note that the leading `-` characters are not a part of featureset name in
 | seconds_resolution| off | 1.4 | enables seconds resolution support
 
 
-## :chart: Trading Platform
+# # :chart: Trading Platform
 
 | ID	| Default State	| Platform Version | Description
 |-------|---------------|-----------------|------------

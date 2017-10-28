@@ -1,4 +1,4 @@
-#Wiki Content
+# Wiki Content
 
 1. [[What is Charting Library|Home]]
 2. Getting Started
